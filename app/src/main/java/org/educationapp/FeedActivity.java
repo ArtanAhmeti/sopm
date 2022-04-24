@@ -2,9 +2,12 @@ package org.educationapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +30,10 @@ public class FeedActivity extends AppCompatActivity {
         setSupportActionBar(feedToolbar);
         getSupportActionBar().setTitle("Feed");
         feedToolbar.setTitleTextColor(getResources().getColor(R.color.black));
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        Log.d("FeedActivity", user.getDisplayName());
+        final TextView welcomeText = (TextView) findViewById(R.id.welcome);
+        welcomeText.setText("Welcome, " +  user.getDisplayName());
     }
 
     @Override
