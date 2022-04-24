@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile_white"
+        android:iconTint="@color/white"
+        android:title="Profile"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/logout"
+        android:onClick="logout"
+        android:icon="@drawable/ic_logout_white"
+        android:title="Item"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:visible="true"
+        />
+</menu>
